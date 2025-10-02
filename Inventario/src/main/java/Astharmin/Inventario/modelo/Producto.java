@@ -18,7 +18,7 @@ import lombok.ToString;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idProductos;
+    Integer idProducto;
     String descripcion;
     Double precio;
     Integer existencia;
