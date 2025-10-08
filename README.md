@@ -10,6 +10,8 @@
 
 > *"Sistema completo de gestión de inventario con arquitectura microservicios, API RESTful y dashboard interactivo"*
 
+---
+
 ## 🌟 Características Principales
 
 ### 📦 Gestión de Inventario
@@ -25,6 +27,14 @@
 - 🔒 **Password encryption** con BCrypt
 - 📧 **Sistema de recuperación** de contraseñas
 
+### 🎨 Experiencia de Usuario
+- 📱 **Diseño responsive** con Bootstrap
+- ⚡ **Interfaz moderna** y intuitiva
+- 🔄 **Actualizaciones en tiempo real**
+- 🎯 **Navegación fluida** entre módulos
+
+---
+
 ## 🏗️ Arquitectura del Sistema
 
 ```mermaid
@@ -34,7 +44,113 @@ graph TB
     B --> D[Spring Data JPA]
     D --> E[MySQL Database]
     
+    F[Bootstrap UI] --> A
     G[RxJS Services] --> A
     H[REST Controllers] --> B
     I[Entity Models] --> D
+    J[Spring Security] --> C
 ```
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+### 🔧 Backend
+- **Spring Boot 3.0** - Framework de aplicaciones Java
+- **Spring Security** - Autenticación y autorización
+- **Spring Data JPA** - Persistencia de datos
+- **JWT** - Tokens de autenticación
+- **Maven** - Gestión de dependencias
+
+### 🎨 Frontend
+- **Angular 16** - Framework TypeScript
+- **Bootstrap 5** - Framework CSS
+- **RxJS** - Programación reactiva
+- **TypeScript** - Superset de JavaScript
+
+### 🗄️ Base de Datos
+- **MySQL 8.0** - Base de datos relacional
+
+---
+
+## 🚀 Instalación Rápida
+
+```bash
+# Clonar repositorio
+git clone https://github.com/Astharmin/Sistema_Inv.git
+cd Sistema_Inv
+
+# Backend (Spring Boot)
+cd backend
+mvn spring-boot:run
+
+# Frontend (Angular)
+cd ../frontend
+npm install
+ng serve
+```
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+Sistema_Inv/
+├── backend/                 # 🖥️ Spring Boot Application
+│   ├── src/
+│   │   ├── main/java/
+│   │   │   ├── controller/     # 🎮 REST Controllers
+│   │   │   ├── service/        # ⚙️ Business Logic
+│   │   │   ├── repository/     # 🗄️ Data Access Layer
+│   │   │   ├── entity/         # 📊 JPA Entities
+│   │   │   └── config/         # 🔧 Security Config
+│   │   └── resources/
+│   └── pom.xml
+├── frontend/                # 🎨 Angular Application
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/     # 🧩 UI Components
+│   │   │   ├── services/       # 🔌 HTTP Services
+│   │   │   ├── models/         # 📝 TypeScript Interfaces
+│   │   │   └── guards/         # 🛡️ Route Guards
+│   └── package.json
+└── README.md
+```
+
+---
+
+## 🔌 Endpoints Principales
+
+### 🔐 Autenticación
+```http
+POST /api/auth/login     # Inicio de sesión
+POST /api/auth/register  # Registro de usuario
+```
+
+### 📦 Gestión de Productos
+```http
+GET    /api/products     # Listar productos
+POST   /api/products     # Crear producto
+PUT    /api/products/{id} # Actualizar producto
+DELETE /api/products/{id} # Eliminar producto
+```
+
+### 📊 Reportes
+```http
+GET /api/reports/stock   # Reporte de stock
+GET /api/reports/sales   # Reporte de ventas
+```
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+<div align="center">
+
+### ⭐ ¿Te gustó este proyecto? ¡Déjame una estrella en GitHub!
+
+**Desarrollado con ❤️ por [Astharmin](https://github.com/Astharmin)**
