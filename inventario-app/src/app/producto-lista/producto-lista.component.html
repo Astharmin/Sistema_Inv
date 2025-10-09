@@ -14,17 +14,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>&#64;mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>&#64;fat</td>
+      <tr *ngFor="let producto of poductos">
+        <th scope="row">{{producto.idProductos}}</th>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.existencia}}</td>
       </tr>
     </tbody>
   </table>
