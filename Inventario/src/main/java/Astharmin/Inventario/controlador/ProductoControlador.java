@@ -1,10 +1,12 @@
 package Astharmin.Inventario.controlador;
 
+import Astharmin.Inventario.excepcion.RecursoNoEncontrado;
 import Astharmin.Inventario.modelo.Producto;
 import Astharmin.Inventario.servicios.ProductoServicio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,4 +36,16 @@ public class ProductoControlador {
         logger.info("Producto agregado: " + producto);
         return this.productoServicio.guardarProducto(producto);
     }
+
+    @GetMapping("/productos/{id}")
+    public ResponseEntity<Producto> obtenerProductoId(
+            @PathVariable int id){
+        Producto producto =
+                this.productoServicio.buscarProductoId(id);
+        if (producto != null)
+            return ResponseEntity.ok(producto);
+        else
+           throw new RecursoNoEncontrado("no se encontro el producto" + id);
+    }
+
 }
