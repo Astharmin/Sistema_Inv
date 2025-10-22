@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from '../producto';
 import { ProductoService } from '../producto.service';
 
@@ -9,15 +10,22 @@ import { ProductoService } from '../producto.service';
 })
 export class ProductoListaComponent {
   poductos: Producto[];
-  constructor(private productoServicio: ProductoService) { }
+  constructor(private productoServicio: ProductoService, 
+    private enrutador: Router) {}
+  
   ngOnInit(){
     this.obtenerProductos();
   }
+  
   private obtenerProductos(){
     this.productoServicio.obtenerProductos().subscribe(
       (datos => {
         this.poductos = datos;
       })
     );
+  }
+
+  editarProducto(id: number){
+    this.enrutador.navigate(['editar-producto', id]);
   }
 }
