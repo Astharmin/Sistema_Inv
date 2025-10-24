@@ -53,6 +53,25 @@ graph TB
 
 ---
 
+## 📸 **Capturas del Sistema**
+
+### 🏠 **Vista Principal - Lista de Productos**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Dashboard principal** con tabla de productos existentes en el sistema | <div align="center"><img src="https://via.placeholder.com/600x350/1a2a6c/ffffff?text=Dashboard+Principal+Inventario" width="400" /><br/>*Tabla de productos con ID, descripción, precios y stock*</div> |
+
+### ✏️ **Editor de Productos**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Formulario de edición** para modificar productos existentes con campos de descripción, precio y existencia | <div align="center"><img src="https://via.placeholder.com/600x350/b21f1f/ffffff?text=Editor+de+Productos" width="400" /><br/>*Interfaz de edición con datos pre-cargados*</div> |
+
+### ➕ **Agregar Nuevo Producto**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Formulario de creación** para agregar nuevos productos al inventario | <div align="center"><img src="https://via.placeholder.com/600x350/3776AB/ffffff?text=Agregar+Nuevo+Producto" width="400" /><br/>*Formulario limpio para nuevo registro*</div> |
+
+---
+
 ## 🛠️ Tecnologías Utilizadas
 
 ### 🔧 Backend
@@ -143,6 +162,22 @@ GET /api/reports/sales   # Reporte de ventas
 
 ---
 
+## 📊 **Funcionalidades Demostradas**
+
+### ✅ **Operaciones CRUD Completas**
+- **📋 Listar productos** con tabla responsive
+- **➕ Agregar nuevos productos** con validación
+- **✏️ Editar productos existentes** con datos pre-cargados
+- **🗑️ Eliminar productos** con confirmación
+
+### 🎯 **Interfaz Intuitiva**
+- **Navegación fluida** entre módulos
+- **Formularios responsive** con Bootstrap
+- **Feedback visual** inmediato
+- **Manejo de estados** de carga y error
+
+---
+
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
@@ -154,3 +189,10 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 ### ⭐ ¿Te gustó este proyecto? ¡Déjame una estrella en GitHub!
 
 **Desarrollado con ❤️ por [Astharmin](https://github.com/Astharmin)**
+
+```mermaid
+graph LR
+    A[Spring Boot] --> B[Angular]
+    B --> C[MySQL]
+    C --> D[🚀 Sistema Completo]
+```
