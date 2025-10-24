@@ -139,7 +139,12 @@ SysInv_Angular/
 │   └── image_3.png         # Agregar producto
 └── README.md
 ```
-
+```mermaid
+graph LR
+    A[Spring Boot] --> B[Angular]
+    B --> C[MySQL]
+    C --> D[🚀 Sistema Completo]
+```
 ---
 
 ## 🔌 Endpoints Principales
@@ -193,10 +198,3 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 ### ⭐ ¿Te gustó este proyecto? ¡Déjame una estrella en GitHub!
 
 **Desarrollado con ❤️ por [Astharmin](https://github.com/Astharmin)**
-
-```mermaid
-graph LR
-    A[Spring Boot] --> B[Angular]
-    B --> C[MySQL]
-    C --> D[🚀 Sistema Completo]
-```
