@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 //http://localhost:8080/inventario_app
@@ -54,6 +56,8 @@ public class ProductoControlador {
             @RequestBody Producto detallesProducto){
         Producto producto = this.productoServicio.
                 buscarProductoId(id);
+        if (producto == null)
+            throw new RecursoNoEncontrado("no se encontro el producto " + id);
         producto.setDescripcion(detallesProducto.getDescripcion());
         producto.setPrecio(detallesProducto.getPrecio());
         producto.setExistencia(detallesProducto.getExistencia());
@@ -62,4 +66,16 @@ public class ProductoControlador {
         return ResponseEntity.ok(producto);
     }
 
+    @DeleteMapping("/productos/{id}")
+    public ResponseEntity<Map<String, Boolean>>
+    eliminarProducto(@PathVariable int id){
+        Producto producto = productoServicio.buscarProductoId(id);
+        if (producto == null)
+            throw new RecursoNoEncontrado("no se encontro el producto " + id);
+        this.productoServicio.eliminarProductoId(id);
+
+        Map<String, Boolean> respuesta = new HashMap<>();
+        respuesta.put("eliminado", Boolean.TRUE);
+        return ResponseEntity.ok(respuesta);
+    }
 }
