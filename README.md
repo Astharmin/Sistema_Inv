@@ -58,17 +58,17 @@ graph TB
 ### 🏠 **Vista Principal - Lista de Productos**
 | **Descripción** | **Vista** |
 |-----------------|-----------|
-| **Dashboard principal** con tabla de productos existentes en el sistema | <div align="center"><img src="https://via.placeholder.com/600x350/1a2a6c/ffffff?text=Dashboard+Principal+Inventario" width="400" /><br/>*Tabla de productos con ID, descripción, precios y stock*</div> |
+| **Dashboard principal** con tabla de productos existentes en el sistema | <div align="center"><img src="./captures/image.png" width="400" alt="Dashboard Principal"/><br/>*Tabla de productos con ID, descripción, precios y stock*</div> |
 
 ### ✏️ **Editor de Productos**
 | **Descripción** | **Vista** |
 |-----------------|-----------|
-| **Formulario de edición** para modificar productos existentes con campos de descripción, precio y existencia | <div align="center"><img src="https://via.placeholder.com/600x350/b21f1f/ffffff?text=Editor+de+Productos" width="400" /><br/>*Interfaz de edición con datos pre-cargados*</div> |
+| **Formulario de edición** para modificar productos existentes con campos de descripción, precio y existencia | <div align="center"><img src="./captures/image_2.png" width="400" alt="Editor de Productos"/><br/>*Interfaz de edición con datos pre-cargados*</div> |
 
 ### ➕ **Agregar Nuevo Producto**
 | **Descripción** | **Vista** |
 |-----------------|-----------|
-| **Formulario de creación** para agregar nuevos productos al inventario | <div align="center"><img src="https://via.placeholder.com/600x350/3776AB/ffffff?text=Agregar+Nuevo+Producto" width="400" /><br/>*Formulario limpio para nuevo registro*</div> |
+| **Formulario de creación** para agregar nuevos productos al inventario | <div align="center"><img src="./captures/image_3.png" width="400" alt="Agregar Nuevo Producto"/><br/>*Formulario limpio para nuevo registro*</div> |
 
 ---
 
@@ -114,7 +114,7 @@ ng serve
 ## 📁 Estructura del Proyecto
 
 ```
-Sistema_Inv/
+SysInv_Angular/
 ├── backend/                 # 🖥️ Spring Boot Application
 │   ├── src/
 │   │   ├── main/java/
@@ -133,6 +133,10 @@ Sistema_Inv/
 │   │   │   ├── models/         # 📝 TypeScript Interfaces
 │   │   │   └── guards/         # 🛡️ Route Guards
 │   └── package.json
+├── captures/                # 📸 Capturas del sistema
+│   ├── image.png           # Vista principal
+│   ├── image_2.png         # Editor de productos
+│   └── image_3.png         # Agregar producto
 └── README.md
 ```
 
