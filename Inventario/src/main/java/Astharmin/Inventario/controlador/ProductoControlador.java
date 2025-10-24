@@ -48,4 +48,18 @@ public class ProductoControlador {
            throw new RecursoNoEncontrado("no se encontro el producto" + id);
     }
 
+    @PutMapping("/productos/{id}")
+    public ResponseEntity<Producto> actualizarProducto(
+            @PathVariable int id,
+            @RequestBody Producto detallesProducto){
+        Producto producto = this.productoServicio.
+                buscarProductoId(id);
+        producto.setDescripcion(detallesProducto.getDescripcion());
+        producto.setPrecio(detallesProducto.getPrecio());
+        producto.setExistencia(detallesProducto.getExistencia());
+        this.productoServicio.
+                guardarProducto(producto);
+        return ResponseEntity.ok(producto);
+    }
+
 }
